@@ -6,8 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 
-const { SOCKETS_ENABLE } = process.env
-
 const config = {
   entry: './client/main.js',
   output: {
@@ -39,7 +37,6 @@ const config = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
               sourceMap: true
             }
           },
@@ -81,9 +78,7 @@ const config = {
         }
       ]
     }),
-    new webpack.DefinePlugin({
-      SOCKETS_ENABLE: !!SOCKETS_ENABLE
-    })
+    new webpack.DefinePlugin()
   ]
 }
 

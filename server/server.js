@@ -1,11 +1,7 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
-import favicon from 'serve-favicon'
-import io from 'socket.io'
 
 import config from './config'
-import mongooseService from './services/mongoose'
-
 import Html from '../client/html'
 
 const { resolve } = require('path')
@@ -26,28 +22,6 @@ middleware.forEach((it) => server.use(it))
 server.get('/', (req, res) => {
   res.send('Express Server')
 })
-
-// MongoDB
-if (config.mongoEnabled) {
-  console.log('MongoDB Enabled: ', config.mongoEnabled)
-  mongooseService.connect()
-}
-
-// SocketsIO
-if (config.socketsEnabled) {
-  console.log('Sockets Enabled: ', config.socketsEnabled)
-  const socketIO = io(httpServer, {
-    path: '/ws'
-  })
-
-  socketIO.on('connection', (socket) => {
-    console.log(`${socket.id} login`)
-
-    socket.on('disconnect', () => {
-      console.log(`${socket.id} logout`)
-    })
-  })
-}
 
 server.get('/*', (req, res) => {
   const initialState = {

@@ -4,7 +4,7 @@ const { resolve } = require('path')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
-const { PORT, SOCKETS_ENABLE } = process.env
+const { PORT } = process.env
 
 const config = {
   mode: 'development',
@@ -13,7 +13,7 @@ const config = {
   },
   devServer: {
     hot: true,
-    // open: true,
+    open: true,
     contentBase: resolve(__dirname, 'dist'),
     port: 8081,
     host: 'localhost',
@@ -23,9 +23,8 @@ const config = {
       errors: true
     },
     proxy: {
-      context: ['/api', '/ws', '/favicon.ico'],
-      target: `http://localhost:${PORT || 8080}`,
-      ws: !!SOCKETS_ENABLE
+      context: ['/api'],
+      target: `http://localhost:${PORT || 8080}`
     },
     publicPath: '/',
     historyApiFallback: true
