@@ -1,34 +1,34 @@
-require('dotenv').config()
+require("dotenv").config()
 
-const { resolve } = require('path')
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
+const { resolve } = require("path")
+const { merge } = require("webpack-merge")
+const common = require("./webpack.common.js")
 
 const { PORT } = process.env
 
 const config = {
-  mode: 'development',
+  mode: "development",
   optimization: {
-    usedExports: true
+    usedExports: true,
   },
   devServer: {
     hot: true,
     open: true,
-    contentBase: resolve(__dirname, 'dist'),
+    contentBase: resolve(__dirname, "dist"),
     port: 8081,
-    host: 'localhost',
-    index: 'index.html',
+    host: "localhost",
+    index: "index.html",
     overlay: {
       warnings: false,
-      errors: true
+      errors: true,
     },
     proxy: {
-      context: ['/api'],
-      target: `http://localhost:${PORT || 8080}`
+      context: ["/api"],
+      target: `http://localhost:${PORT || 8080}`,
     },
-    publicPath: '/',
-    historyApiFallback: true
-  }
+    publicPath: "/",
+    historyApiFallback: true,
+  },
 }
 
 module.exports = merge(common, config)

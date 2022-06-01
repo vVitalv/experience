@@ -1,10 +1,10 @@
-import express from 'express'
-import cookieParser from 'cookie-parser'
+import express from "express"
+import cookieParser from "cookie-parser"
 
-import config from './config'
-import Html from '../client/html'
+import config from "./config"
+import Html from "../client/html"
 
-const { resolve } = require('path')
+const { resolve } = require("path")
 
 const server = express()
 
@@ -12,35 +12,39 @@ const PORT = config.port
 
 const middleware = [
   cookieParser(),
-  express.json({ limit: '50kb' }),
-  express.static(resolve(__dirname, '../dist')),
-  favicon(`${__dirname}/public/favicon.ico`)
+  express.json({ limit: "50kb" }),
+  express.static(resolve(__dirname, "../dist")),
 ]
 
 middleware.forEach((it) => server.use(it))
 
-server.get('/', (req, res) => {
-  res.send('Express Server')
+server.get("/", (req, res) => {
+  res.send("Express Server")
 })
 
-server.get('/*', (req, res) => {
+server.get("/*", (req, res) => {
   const initialState = {
-    location: req.url
+    location: req.url,
   }
 
   return res.send(
     Html({
-      body: '',
-      initialState
+      body: "",
+      initialState,
     })
   )
 })
 
-server.use('/api/', (req, res) => {
+server.use("/api/", (req, res) => {
   res.status(404)
   res.end()
 })
 
 server.listen(PORT)
+
+process.on("SIGINT", function () {
+  console.log("\nGracefully shutting down from SIGINT (Ctrl-C)")
+  process.exit(0)
+})
 
 console.log(`Serving at http://localhost:${PORT}`)

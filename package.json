@@ -5,7 +5,7 @@
   "author": "risitas",
   "license": "MIT",
   "scripts": {
-    "dev": "clear & yarn run watch:server & yarn run watch:client",
+    "dev": "yarn run watch:server & yarn run watch:client",
     "watch:server": "nodemon start.js",
     "watch:client": "webpack serve --config webpack.dev.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js --progress  --profile",
@@ -26,10 +26,10 @@
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.0",
@@ -45,7 +45,7 @@
     "eslint-webpack-plugin": "^2.4.1",
     "mini-css-extract-plugin": "^1.4.0",
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.16",
     "postcss": "^8.2.9",
     "postcss-import": "^14.0.0",
     "postcss-loader": "^6.1.0",
@@ -56,5 +56,10 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.7.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.hot-update.json"
+    ]
   }
 }

@@ -1,17 +1,17 @@
-require('dotenv').config()
+require("dotenv").config()
 
-const { resolve } = require('path')
-const webpack = require('webpack')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
+const { resolve } = require("path")
+const webpack = require("webpack")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ESLintPlugin = require("eslint-webpack-plugin")
 
 const config = {
-  entry: './client/main.js',
+  entry: "./client/main.js",
   output: {
-    filename: 'assets/js/[name].bundle.js',
-    path: resolve(__dirname, 'dist'),
-    publicPath: '/'
+    filename: "assets/js/[name].bundle.js",
+    path: resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -19,11 +19,11 @@ const config = {
         test: /\.(js|jsx)$/i,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.(css|scss)$/i,
@@ -31,55 +31,56 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../'
-            }
+              publicPath: "../",
+            },
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
-          'postcss-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+          "postcss-loader",
+          "sass-loader",
+        ],
+      },
+    ],
   },
   plugins: [
     new ESLintPlugin({
-      extensions: ['js', 'jsx'],
-      exclude: 'node_modules'
+      extensions: ["js", "jsx"],
+      exclude: "node_modules",
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/style.css'
+      filename: "assets/css/style.css",
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: `client/index.html`,
-          to: '[name][ext]'
+          to: "[name][ext]",
         },
         {
-          from: 'client/html.js',
-          to: '[name][ext]',
+          from: "client/html.js",
+          to: "[name][ext]",
         },
         {
           from: `client/assets/images`,
-          to: 'assets/images'
+          to: "assets/images",
         },
         {
           from: `client/assets/fonts`,
-          to: 'assets/fonts'
+          to: "assets/fonts",
         },
-        {
-          from: `server/public/favicon.ico`,
-          to: '[name][ext]'
-        }
-      ]
+      ],
     }),
-    new webpack.DefinePlugin()
-  ]
+    new webpack.DefinePlugin(
+      Object.keys(process.env).reduce((res, key) => ({
+        ...res,
+        [key]: JSON.stringify(process.env[key]),
+      }))
+    ),
+  ],
 }
 
 module.exports = config

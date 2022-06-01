@@ -1,17 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from "react-dom/client"
 
 import './assets/styles/style.scss'
 
 import Root from './config/root'
 
-const target = document.querySelector('#root')
+const container = document.getElementById("root")
+const root = createRoot(container)
 
-const render = (Component) => {
-  ReactDOM.render(
-    <Component />,
-    target
-  )
-}
-
-render(Root)
+root.render(<Root tab='home' />)

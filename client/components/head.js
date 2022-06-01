@@ -1,17 +1,17 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from "react"
+import { Helmet } from "react-helmet"
 
 const Head = ({ title }) => {
   return (
     <Helmet>
-      <meta charSet="utf-8" />
+      <meta charSet='utf-8' />
       <title>{`Experience - ${title}`}</title>
     </Helmet>
   )
 }
 
 Head.defaultProps = {
-  title: `${window.location.host}`
+  title: `${window.location.host}`,
 }
 
 export default Head

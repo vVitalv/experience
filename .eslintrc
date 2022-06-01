@@ -53,6 +53,8 @@
     "linebreak-style": "off",
     "global-require": "off",
     "semi": "off",
+    "jsx-quotes": "off",
+    "quotes": "off",
     "arrow-body-style": "off",
     "comma-dangle": "off",
     "class-methods-use-this": "off",
