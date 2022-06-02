@@ -22,7 +22,6 @@ const config = {
     historyApiFallback: true,
     port: 8081,
     host: "localhost",
-    index: "index.html",
     client: {
       overlay: {
         warnings: false,

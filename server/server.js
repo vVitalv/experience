@@ -42,7 +42,7 @@ server.use("/api/", (req, res) => {
 
 server.listen(PORT)
 
-process.on("SIGINT", function () {
+process.on("SIGINT", () => {
   console.log("\nGracefully shutting down from SIGINT (Ctrl-C)")
   process.exit(0)
 })
