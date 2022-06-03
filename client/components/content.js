@@ -1,12 +1,12 @@
 import React from "react"
 
-import Opila from "./opila"
+import OpiReactLogola from "./reactlogo"
 
 const Content = () => {
   return (
     <main className='absolute flex flex-col items-center w-full max-h-max overflow-y-auto'>
       <div className='flex justify-center items-center w-full h-screen bg-gray-700'>
-        <Opila />
+        <ReactLogo />
       </div>
       <div className='w-full h-96 bg-gray-700'>section2</div>
       <div className='w-full h-96 bg-gray-700'>section3</div>
