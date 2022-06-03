@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <Div100vh>
       <Head title='Home' />
-      <div className='flex flex-col w-full h-full font-semibold text-gray-200'>
+      <div id='viewport' className='flex flex-col w-full h-full font-mono font-semibold text-gray-200'>
         <Header />
         <Content />
       </div>
