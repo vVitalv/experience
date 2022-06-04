@@ -7,11 +7,11 @@ const ReactLogo = () => {
         viewBox='0 0 100 100'
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
-        strokeWidth={1}
       >
         <g strokeWidth={2}>
           <ellipse
             stroke='#38bdf8'
+            strokeOpacity={0}
             filter='url(#shadow2)'
             id='myCircle'
             cx='50'
@@ -24,6 +24,7 @@ const ReactLogo = () => {
               dur='6s'
               values='0; 0; 1'
               keyTimes='0; 0.9; 1'
+              fill='freeze'
             />
           </ellipse>
           <use href='#myCircle' transform='rotate(60 50 50)' />
@@ -35,7 +36,7 @@ const ReactLogo = () => {
             attributeName='fill'
             dur='6s'
             from='#e0f2fe'
-            to='#38bdf8'
+            to='#fbbf24'
             fill='freeze'
           />
         </circle>

@@ -1,9 +1,12 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 const HeaderMenu = ({ toggleMenu }) => {
   return (
-    <div
-      className='fixed top-14 right-0 w-40 bg-yellow-300'
+    <nav
+      className='fixed top-14 right-0 w-40 bg-neutral-300 bg-opacity-10 backdrop-blur-md'
+      role='navigation'
+      aria-label='main navigation'
       onMouseEnter={() => {
         toggleMenu(true)
       }}
@@ -12,11 +15,17 @@ const HeaderMenu = ({ toggleMenu }) => {
       }}
     >
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'>
+          <NavLink to='/'>Home</NavLink>
+        </li>
+        <li className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'>
+          <NavLink to='/about'>About</NavLink>
+        </li>
+        <li className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'>
+          <NavLink to='/contact'>Contact</NavLink>
+        </li>
       </ul>
-    </div>
+    </nav>
   )
 }
 
