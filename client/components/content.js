@@ -1,6 +1,7 @@
 import React from "react"
 
 import ReactLogo from "./reactlogo"
+import Hi from "./section1"
 
 const Content = () => {
   return (
@@ -8,10 +9,12 @@ const Content = () => {
       <div className='flex justify-center items-center w-full h-screen '>
         <ReactLogo />
       </div>
-      <div className='w-full h-96'>section2</div>
-      <div className='w-full h-96'>section3</div>
-      <div className='w-full h-96'>section4</div>
-      <div className='w-full h-96'>section5</div>
+      <div className='flex justify-center items-center w-full h-screen'>
+        <Hi />
+      </div>
+      <div className='w-full h-screen'>section3</div>
+      <div className='w-full h-screen'>section4</div>
+      <div className='w-full h-screen'>section5</div>
     </main>
   )
 }
