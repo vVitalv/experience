@@ -113,7 +113,7 @@ const ReactLogo = () => {
         <g
           stroke='white'
           strokeOpacity={0}
-          strokeWidth={0.2}
+          strokeWidth={0.3}
           filter='url(#shadow)'
         >
           <use href='#light1' transform='rotate(50 50 50)'>
