@@ -2,8 +2,13 @@ import React from "react"
 
 const ReactLogo = () => {
   return (
-    <div className='w-60 h-60'>
-      <svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='none'>
+    <section className='flex justify-center items-center w-full h-screen'>
+      <svg
+        className='w-60 h-60'
+        viewBox='0 0 100 100'
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+      >
         <defs>
           <symbol id='orbits' strokeWidth={2}>
             <ellipse
@@ -175,7 +180,7 @@ const ReactLogo = () => {
           <feDropShadow dx='0' dy='0' stdDeviation='2' floodColor='#38bdf8' />
         </filter>
       </svg>
-    </div>
+    </section>
   )
 }
 

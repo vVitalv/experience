@@ -1,15 +1,19 @@
 import React from "react"
 
-const Opila = () => {
+const Opila = ({ scrollPosition }) => {
+  const opilaShine =
+    scrollPosition > window.screen.availHeight * 0.7
+      ? "stroke-rose-300 [filter:url(#shine)]"
+      : "stroke-gray-800"
   return (
     <svg
-      className='w-60 h-60 fill-[none]'
+      className='w-40 h-40 fill-[none]'
       viewBox='0 0 150 150'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <g filter='url(#shine)'>
+      <g id='opila' className={`transition-colors duration-1000 ${opilaShine}`}>
         <rect
-          className='stroke-rose-100 stroke-[4]'
+          strokeWidth={4}
           x='10'
           y='10'
           rx='7'
@@ -18,7 +22,7 @@ const Opila = () => {
           height='130'
         />
         <path
-          className='stroke-rose-300 stroke-[6]'
+          strokeWidth={8}
           strokeLinecap='round'
           d='M 110,125
           l -70 -60
@@ -29,7 +33,7 @@ const Opila = () => {
         />
       </g>
       <filter id='shine'>
-        <feDropShadow dx='0' dy='0' stdDeviation='4' floodColor='#fce7f3' />
+        <feDropShadow dx='0' dy='0' stdDeviation='2' floodColor='#fce7f3' />
       </filter>
     </svg>
   )
