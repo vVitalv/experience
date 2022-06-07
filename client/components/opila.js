@@ -3,15 +3,18 @@ import React from "react"
 const Opila = ({ scrollPosition }) => {
   const opilaShine =
     scrollPosition > window.screen.availHeight * 0.7
-      ? "stroke-rose-300 [filter:url(#shine)]"
+      ? "stroke-yellow-100 [filter:url(#shine)]"
       : "stroke-gray-800"
   return (
     <svg
-      className='w-40 h-40 fill-[none]'
+      className='sticky top-16 w-36 h-36'
       viewBox='0 0 150 150'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <g id='opila' className={`transition-colors duration-1000 ${opilaShine}`}>
+      <g
+        id='opila'
+        className={`fill-[none] transition-colors duration-1000 ${opilaShine}`}
+      >
         <rect
           strokeWidth={4}
           x='10'
@@ -33,10 +36,10 @@ const Opila = ({ scrollPosition }) => {
         />
       </g>
       <filter id='shine'>
-        <feDropShadow dx='0' dy='0' stdDeviation='2' floodColor='#fce7f3' />
+        <feDropShadow dx='0' dy='0' stdDeviation='3' floodColor='#fef08a' />
       </filter>
     </svg>
   )
 }
 
-export default Opila
+export default React.memo(Opila)

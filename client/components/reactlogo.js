@@ -145,7 +145,7 @@ const ReactLogo = () => {
             <animate
               attributeName='stroke-opacity'
               begin='7s'
-              dur='8.5s'
+              dur='8.2s'
               values='0; 1; 0; 0; 1; 0; 0'
               keyTimes='0; 0.02; 0.05; 0.75; 0.77; 0.8; 1'
               repeatCount='3'
@@ -155,7 +155,7 @@ const ReactLogo = () => {
             <animate
               attributeName='stroke-opacity'
               begin='11s'
-              dur='8s'
+              dur='8.4s'
               values='0; 1; 0; 0; 1; 0; 0'
               keyTimes='0; 0.02; 0.05; 0.75; 0.77; 0.8; 1'
               repeatCount='3'
@@ -165,7 +165,17 @@ const ReactLogo = () => {
             <animate
               attributeName='stroke-opacity'
               begin='13s'
-              dur='7.5s'
+              dur='7.7s'
+              values='0; 1; 0; 0; 1; 0; 0'
+              keyTimes='0; 0.02; 0.05; 0.75; 0.77; 0.8; 1'
+              repeatCount='3'
+            />
+          </use>
+          <use href='#light2' transform='rotate(165 50 50)'>
+            <animate
+              attributeName='stroke-opacity'
+              begin='10s'
+              dur='7.8s'
               values='0; 1; 0; 0; 1; 0; 0'
               keyTimes='0; 0.02; 0.05; 0.75; 0.77; 0.8; 1'
               repeatCount='3'

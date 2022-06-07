@@ -1,31 +1,40 @@
 import React from "react"
-import Opila from "./opila"
 
 const Hi = ({ scrollPosition }) => {
-  // if (scrollPosition > window.screen.availHeight * 0.3) {
-  //   const section1P1 = document.querySelector("#s1-p1")
-  //   section1P1.classList.add("-translate-y-44")
-  //   section1P1.classList.add("scale-150")
-  // }
-  // if (scrollPosition > window.screen.availHeight * 0.4) {
-  //   const section1P2 = document.querySelector("#s1-p2")
-  //   section1P2.classList.add("-translate-y-32")
-  //   section1P2.classList.add("scale-150")
-  // }
-  const p1Show = scrollPosition > window.screen.availHeight * 0.3 ? '-translate-y-44 scale-150' : null
-  const p2Show = scrollPosition > window.screen.availHeight * 0.4 ? '-translate-y-32 scale-150' : null
+  const isShown = { "#s1-p1": false, "#s1-p2": false }
+  const textIDs = Object.keys(isShown)
+  function showText(elementID, scrollLevel, classesArray) {
+    if (scrollPosition > window.screen.availHeight * scrollLevel) {
+      const textElement = document.querySelector(elementID)
+      classesArray.forEach((newClass) => textElement.classList.add(newClass))
+      isShown[elementID] = true
+    }
+  }
+  if (!isShown[textIDs[0]]) {
+    showText([textIDs[0]], 0.3, [
+      "text-yellow-200",
+      "-translate-y-44",
+      "scale-150",
+    ])
+  }
+  if (!isShown[textIDs[1]]) {
+    showText([textIDs[1]], 0.4, [
+      "text-yellow-200",
+      "-translate-y-44",
+      "scale-150",
+    ])
+  }
   return (
-    <section className='flex flex-col justify-center items-center w-full h-screen text-center font-thin text-xs sm:text-base break-words'>
-      <p id='s1-p1' className={`transition duration-1000 ${p1Show}`}>
+    <section className='flex flex-col justify-center items-center w-full h-80 text-center font-thin text-xs sm:text-base break-words'>
+      <p id='s1-p1' className='transition duration-1000'>
         Hi there! My name is Vital
       </p>
       <br />
-      <p id='s1-p2' className={`transition duration-1000 ${p2Show}`}>
+      <p id='s1-p2' className='transition duration-1000'>
         And this is my Experience Demo
       </p>
-      <Opila scrollPosition={scrollPosition} />
     </section>
   )
 }
 
-export default Hi
+export default React.memo(Hi)
