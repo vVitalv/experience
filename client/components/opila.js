@@ -1,10 +1,10 @@
 import React from "react"
 
-const Opila = ({ scrollPosition }) => {
-  const opilaShine =
-    scrollPosition > window.screen.availHeight * 0.7
-      ? "stroke-yellow-100 [filter:url(#shine)]"
-      : "stroke-gray-800"
+const Opila = () => {
+  // const opilaShine =
+  //   scrollPosition > window.screen.availHeight * 0.7
+  //     ? "stroke-yellow-100 [filter:url(#shine)]"
+  //     : "stroke-gray-800"
   return (
     <svg
       className='sticky top-16 w-36 h-36'
@@ -13,7 +13,7 @@ const Opila = ({ scrollPosition }) => {
     >
       <g
         id='opila'
-        className={`fill-[none] transition-colors duration-1000 ${opilaShine}`}
+        className='fill-[none] transition-colors duration-1000'
       >
         <rect
           strokeWidth={4}
