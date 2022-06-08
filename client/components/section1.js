@@ -1,26 +1,6 @@
-import React, { useEffect, useRef } from "react"
+import React, { useLayoutEffect, useRef } from "react"
 
-// const TextContent = forwardRef(() => {})
-// TextContent.displayName = "TextContent"
 function Hi() {
-  // const isShown = { "#s1-p1": false, "#s1-p2": false }
-  // const textIDs = Object.keys(isShown)
-  // function showText(elementID, classesArray) {
-  //   const textElement = document.querySelector(elementID)
-  //   if (
-  //     scrollPosition >
-  //     textElement.offsetTop - window.screen.availHeight / 2
-  //   ) {
-  //     classesArray.forEach((newClass) => textElement.classList.add(newClass))
-  //     isShown[elementID] = true
-  //   }
-  // }
-
-  // textIDs.forEach((textID) => {
-  //   if (!isShown.textID) {
-  //     showText(textID, ["text-yellow-200", "scale-150"])
-  //   }
-  // })
   const ref = useRef()
   const observer = new IntersectionObserver(
     (entries) => {
@@ -30,9 +10,9 @@ function Hi() {
         }
       })
     },
-    { rootMargin: "-45% 0px -45% 0px", threshold: 0.5 }
+    { rootMargin: "0px 0px -80px 0px", threshold: 0.5 }
   )
-  useEffect(() => {
+  useLayoutEffect(() => {
     observer.observe(ref.current)
   })
 

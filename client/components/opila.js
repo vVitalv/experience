@@ -7,7 +7,7 @@ const Opila = () => {
   //     : "stroke-gray-800"
   return (
     <svg
-      className='sticky top-16 w-36 h-36'
+      className='w-36 h-36'
       viewBox='0 0 150 150'
       xmlns='http://www.w3.org/2000/svg'
     >
