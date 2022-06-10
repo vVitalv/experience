@@ -6,7 +6,7 @@ import HeaderMenu from "./headermenu"
 const Header = () => {
   const [isDroped, toggleMenu] = useState(false)
   return (
-    <header className='fixed z-10 flex justify-between items-center w-full h-14 px-6 bg-neutral-500 bg-opacity-10 backdrop-blur-md'>
+    <header className='fixed z-50 flex justify-between items-center w-full h-14 px-6 bg-neutral-500 text-gray-200 bg-opacity-10 backdrop-blur-md'>
       <span>E X P E R I E N C E</span>
       <button
         type='button'

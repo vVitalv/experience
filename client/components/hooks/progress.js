@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function useProgress(refName) {
+export default function useProgressObserver(refName) {
   const [refWidth, setRefWidth] = useState(10)
   const observerCallback = (entries) => {
     if (entries[0].isIntersecting) {

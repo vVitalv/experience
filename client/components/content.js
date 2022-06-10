@@ -3,15 +3,15 @@ import React, { useRef } from "react"
 import ReactLogo from "./reactlogo"
 import Hi from "./section1"
 import H1 from "./h1"
-import useProgress from "./progresshook"
+import useProgressObserver from "./hooks/progress"
 
 const Content = () => {
   const s1 = useRef()
   const s2 = useRef()
   const s3 = useRef()
-  const s1Width = useProgress(s1)
-  const s2Width = useProgress(s2)
-  const s3Width = useProgress(s3)
+  const s1Width = useProgressObserver(s1)
+  const s2Width = useProgressObserver(s2)
+  const s3Width = useProgressObserver(s3)
   return (
     <main className='flex flex-col items-center w-full min-h-fit px-2 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
       <ReactLogo />

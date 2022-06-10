@@ -1,29 +1,29 @@
-import React, { useLayoutEffect, useRef } from "react"
+import React, { useRef } from "react"
 
-function Hi() {
-  const ref = useRef()
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.toggle("text-yellow-200")
-        }
-      })
-    },
-    { rootMargin: "0px 0px -80px 0px", threshold: 0.5 }
-  )
-  useLayoutEffect(() => {
-    observer.observe(ref.current)
-  })
+import useTextObserver from "./hooks/showtext"
 
+const Hi = () => {
+  const pStyle = "w-full p-2 transition duration-1000"
+  const p1 = useRef()
+  const p2 = useRef()
+  const p3 = useRef()
+  const p4 = useRef()
+  const refsArray = [p1, p2, p3, p4]
+  useTextObserver(refsArray)
   return (
-    <section className='flex flex-col justify-center items-center w-full h-80 text-center font-thin text-xs sm:text-base break-words'>
-      <p ref={ref} className='transition duration-1000'>
+    <section className='flex flex-col justify-center items-center w-full min-h-screen text-center font-thin text-xs break-words sm:text-base'>
+      <p ref={p1} className={pStyle}>
         Hi there! My name is Vital
       </p>
-      <br />
-      <p id='s1-p2' className='transition duration-1000'>
+      <p ref={p2} className={pStyle}>
         And this is my Experience Demo
+      </p>
+      <p ref={p3} className={pStyle}>
+        My current stack is:
+      </p>
+      <p ref={p4} className={pStyle}>
+        vanilla js, node, react, express, mongodb, redux, socket.io, tailwind,
+        html, css, sass
       </p>
     </section>
   )

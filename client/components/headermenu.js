@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 const HeaderMenu = ({ toggleMenu }) => {
   return (
     <nav
-      className='fixed flex flex-col top-14 right-0 w-40 bg-neutral-300 bg-opacity-10 backdrop-blur-sm'
+      className='fixed flex flex-col top-14 z-50 right-0 w-40 text-gray-200 bg-neutral-300 bg-opacity-10 backdrop-blur-sm'
       role='navigation'
       aria-label='main navigation'
       onMouseEnter={() => {
