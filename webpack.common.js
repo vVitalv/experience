@@ -44,6 +44,10 @@ const config = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.svg$/,
+        type: "asset/inline",
+      },
     ],
   },
   plugins: [
