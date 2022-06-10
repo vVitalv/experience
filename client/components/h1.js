@@ -13,4 +13,4 @@ const H1 = ({ hText, width }) => {
   )
 }
 
-export default H1
+export default React.memo(H1)

@@ -7,7 +7,7 @@ export default function useTextObserver(refs) {
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("text-yellow-200")
+        entry.target.classList.add("text-amber-200")
         entry.target.classList.add("-translate-y-10")
         isShown[entry.target.getAttribute("ref")] = true
       }

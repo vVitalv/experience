@@ -1,9 +1,11 @@
 import React, { useRef } from "react"
 
-import ReactLogo from "./reactlogo"
-import Hi from "./section1"
-import H1 from "./h1"
 import useProgressObserver from "./hooks/progress"
+import ReactLogo from "./reactlogo"
+import H1 from "./h1"
+import Hi from "./section1/greetings"
+import Floodary from "./section2/floodary"
+import Maccaroni from "./section3/maccaroni"
 
 const Content = () => {
   const s1 = useRef()
@@ -20,12 +22,12 @@ const Content = () => {
         <Hi />
       </div>
       <div ref={s2} className='flex flex-col items-center w-full'>
-        <H1 hText={`Floodary ${"\uD83D\uDC4B"}`} width={s2Width} />
-        <section className='w-full h-screen'>section4</section>
+        <H1 hText={`Floodary ${"\uD83D\uDC44"}`} width={s2Width} />
+        <Floodary />
       </div>
       <div ref={s3} className='flex flex-col items-center w-full'>
-        <H1 hText={`Maccarony ${"\uD83D\uDC4B"}`} width={s3Width} />
-        <section className='w-full h-screen'>section5</section>
+        <H1 hText={`Maccarony ${"\uD83C\uDF5C"}`} width={s3Width} />
+        <Maccaroni />
       </div>
     </main>
   )
