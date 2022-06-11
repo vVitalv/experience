@@ -7,7 +7,10 @@ const Header = () => {
   const [isDroped, toggleMenu] = useState(false)
   return (
     <header className='fixed z-50 flex justify-between items-center w-full h-14 px-6 bg-neutral-500 text-gray-200 bg-opacity-10 backdrop-blur-md'>
-      <span>E X P E R I E N C E</span>
+      <p>
+        <span>E X P </span>
+        <span className='text-amber-300'>D E M {"\u16DF"}</span>
+      </p>
       <button
         type='button'
         className='self-end w-7 h-10 pb-3 stroke-gray-200 outline-none'

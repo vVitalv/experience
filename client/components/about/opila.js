@@ -7,13 +7,13 @@ const Opila = () => {
   //     : "stroke-gray-800"
   return (
     <svg
-      className='w-36 h-36'
+      className='portrait:min-w-full landscape:max-h-screen stroke-gray-800'
       viewBox='0 0 150 150'
       xmlns='http://www.w3.org/2000/svg'
     >
       <g
         id='opila'
-        className='fill-[none] transition-colors duration-1000'
+        className='fill-[none] transition-colors duration-1000 stroke-violet-800 [filter:url(#shine)]'
       >
         <rect
           strokeWidth={4}

@@ -12,6 +12,7 @@ import tailwindlogo from "../../assets/images/tailwindcss.svg"
 import htmllogo from "../../assets/images/html.svg"
 import csslogo from "../../assets/images/css.svg"
 import sasslogo from "../../assets/images/sass.svg"
+import gitlogo from "../../assets/images/github.svg"
 
 const Hi = () => {
   const pStyle = "w-full p-2 transition duration-1000"
@@ -72,6 +73,9 @@ const Hi = () => {
         </li>
         <li className={liStyle}>
           <img src={sasslogo} className={svgStyle} alt='SASS logo' /> SASS
+        </li>
+        <li className={liStyle}>
+          <img src={gitlogo} className={svgStyle} alt='GitHub logo' /> GitHub
         </li>
       </ul>
     </section>

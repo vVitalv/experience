@@ -5,7 +5,6 @@ import lighthouselogo from "../../assets/images/lighthouse.svg"
 
 const Maccaroni = () => {
   const pStyle = "w-full p-2 transition duration-1000"
-
   const s2p1 = useRef()
   const s2p2 = useRef()
   const s2p3 = useRef()
@@ -14,8 +13,10 @@ const Maccaroni = () => {
   return (
     <section className='flex flex-col justify-center items-center w-full min-h-min mt-14 text-center font-thin text-xs break-words sm:text-base'>
       <p ref={s2p1} className={pStyle}>
-        <span className='text-amber-400'>&#39;Maccaroni&#39;</span> is my pet
-        e-commerce
+        <span className='text-amber-100 font-semibold'>
+          &#39;Maccaroni&#39;
+        </span>{" "}
+        is my pet e-commerce
       </p>
       <p ref={s2p2} className={pStyle}>
         that implemented: responsive design, accessibility, JWT authorization,
@@ -55,7 +56,7 @@ const Maccaroni = () => {
           Lighthouse <span className='text-green-500'>[94, 100, 100, 100]</span>
         </p>
       </div>
-      <div className='flex w-full justify-around m-4'>
+      <div className='flex w-full justify-around mx-4 mt-6 mb-16'>
         <button
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
