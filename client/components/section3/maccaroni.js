@@ -56,7 +56,7 @@ const Maccaroni = () => {
           Lighthouse <span className='text-green-500'>[94, 100, 100, 100]</span>
         </p>
       </div>
-      <div className='flex w-full justify-around mx-4 mt-6 mb-16'>
+      <div className='flex w-full justify-around mx-4 my-6'>
         <button
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
@@ -76,6 +76,10 @@ const Maccaroni = () => {
           To code (GitHub)
         </button>
       </div>
+      <p className='text-gray-500 text-xs mb-16'>
+        Note: The delay in loading the application on Heroku is due to the
+        server going to sleep after an hour of inactivity
+      </p>
     </section>
   )
 }

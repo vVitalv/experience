@@ -13,8 +13,8 @@ const Floodary = () => {
   return (
     <section className='flex flex-col justify-center items-center w-full min-h-min mt-14 text-center font-thin text-xs break-words sm:text-base'>
       <p ref={s2p1} className={pStyle}>
-        <span className='text-amber-100 font-semibold'>&#39;Floodary&#39;</span> is my pet
-        websocket chat
+        <span className='text-amber-100 font-semibold'>&#39;Floodary&#39;</span>{" "}
+        is my pet websocket chat
       </p>
       <p ref={s2p2} className={pStyle}>
         that implemented: responsive design, accessibility, JWT authorization,
@@ -75,6 +75,10 @@ const Floodary = () => {
           To code (GitHub)
         </button>
       </div>
+      <p className='text-gray-500 text-xs mb-4'>
+        Note: The delay in loading the application on Heroku is due to the
+        server going to sleep after an hour of inactivity
+      </p>
     </section>
   )
 }
