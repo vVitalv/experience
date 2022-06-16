@@ -57,6 +57,7 @@
     "function-paren-newline": "off",
     "implicit-arrow-linebreak": "off",
     "jsx-quotes": "off",
+    "react/jsx-curly-newline": "off",
     "quotes": "off",
     "operator-linebreak": "off",
     "arrow-body-style": "off",
