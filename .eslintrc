@@ -54,6 +54,8 @@
     "global-require": "off",
     "semi": "off",
     "object-curly-newline": "off",
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": "off",
     "jsx-quotes": "off",
     "quotes": "off",
     "operator-linebreak": "off",

@@ -1,5 +1,5 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const HeaderMenu = ({ toggleMenu }) => {
   return (
@@ -14,24 +14,24 @@ const HeaderMenu = ({ toggleMenu }) => {
         toggleMenu(false)
       }}
     >
-      <NavLink
+      <Link
         className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'
         to='/'
       >
         Home
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'
         to='/about'
       >
         About
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         className='w-full p-4 hover:bg-neutral-300 hover:bg-opacity-30'
-        to='/contact'
+        to='/contacts'
       >
         Contact
-      </NavLink>
+      </Link>
     </nav>
   )
 }

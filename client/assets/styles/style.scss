@@ -1,3 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@keyframes popup {
+  0% { bottom: -10rem; }
+  10% { bottom: 3.5rem; }
+  15% { bottom: 3rem; }
+  85% { bottom: 3rem; }
+  90% { bottom: 3.5rem; }
+  100% { bottom: -20rem; }
+}
