@@ -1,27 +1,24 @@
 import React from "react"
 
-const Opila = ({ x, y }) => {
+const Opila = ({ mouseX, mouseY }) => {
   const width = document.body.clientWidth
   const height = document.body.clientHeight
-  const skewX =
-    y < height / 2
-      ? Math.round((y / height) * 35)
-      : Math.round(-(1 - y / height) * 35)
-  const skewY =
-    x < width / 2
-      ? Math.round(-(x / width) * 35)
-      : Math.round((1 - x / width) * 35)
+  const rotateX =
+    mouseY < height / 2
+      ? Math.round((mouseY / height) * 25)
+      : Math.round(-(1 - mouseY / height) * 25)
+  const rotateY =
+    mouseX < width / 2
+      ? Math.round(-(mouseX / width) * 25)
+      : Math.round((1 - mouseX / width) * 25)
   const opilaSkew = {
-    transform: `perspective(200px) rotateX(${skewX}deg) rotateY(${skewY}deg)`,
-    "transition-duration": "0.6s",
+    transform: `perspective(200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transitionDuration: "0.6s",
   }
   return (
-    <div
-      className='portrait:min-w-full landscape:max-h-screen stroke-gray-800'
-      style={opilaSkew}
-    >
+    <div className='w-44 h-44 md:w-1/4 lg:w-1/6 md:h-fit' style={opilaSkew}>
       <svg
-        className='w-44 h-44'
+        className='w-full h-full'
         viewBox='0 0 150 150'
         xmlns='http://www.w3.org/2000/svg'
       >

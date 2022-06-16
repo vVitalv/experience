@@ -13,7 +13,7 @@ const AboutContent = () => {
         setY(e.clientY)
       }}
     >
-      <Opila x={mouseX} y={mouseY} />
+      <Opila mouseX={mouseX} mouseY={mouseY} />
     </main>
   )
 }
