@@ -3,7 +3,7 @@ import React, { useRef } from "react"
 import useTextObserver from "../hooks/showtext"
 import lighthouselogo from "../../assets/images/lighthouse.svg"
 
-const Maccaroni = () => {
+const ExpDemo = () => {
   const pStyle = "w-full p-2 transition duration-1000"
   const s2p1 = useRef()
   const s2p2 = useRef()
@@ -13,14 +13,13 @@ const Maccaroni = () => {
   return (
     <section className='flex flex-col justify-center items-center w-full min-h-min mt-14 text-center font-thin text-xs break-words sm:text-base'>
       <p ref={s2p1} className={pStyle}>
+        And <strong>THIS</strong> is my{" "}
         <span className='text-amber-100 font-semibold'>
-          &#39;Maccaroni&#39;
-        </span>{" "}
-        is my pet e-commerce
+          &#39;Experience Demo&#39;
+        </span>
       </p>
       <p ref={s2p2} className={pStyle}>
-        that implemented: responsive design, accessibility, JWT authorization,
-        dark-mode, lazy-loading, SVG drawing, sorting/searching, logs, popups
+        that implemented: responsive design, accessibility, SVG drawing, scroll observing
       </p>
       <p ref={s2p3} className={pStyle}>
         Stack used:
@@ -28,22 +27,19 @@ const Maccaroni = () => {
       <ul className='flex flex-col gap-4 text-left text-gray-300'>
         <li>
           - <span className='font-semibold text-amber-200'>backend</span> -
-          Node.JS, Express.JS, JWT
-        </li>
-        <li>
-          - <span className='font-semibold text-amber-200'>data</span> -
-          MongoDB, Mongoose
+          Node.JS, Express.JS
         </li>
         <li>
           - <span className='font-semibold text-amber-200'>frontend</span> -
-          React.JS, Redux
+          React.JS
         </li>
         <li>
           - <span className='font-semibold text-amber-200'>layout</span> -
           Tailwind CSS, JSX
         </li>
         <li>
-          - <span className='font-semibold text-amber-200'>API</span> - REST
+          - <span className='font-semibold text-amber-200'>scroll observe</span>{" "}
+          - IntersectionObserver API
         </li>
       </ul>
       <div className='flex items-center my-6 text-gray-300'>
@@ -61,7 +57,7 @@ const Maccaroni = () => {
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
           onClick={() => {
-            window.open("https://maccaroni.herokuapp.com/", "_blank")
+            window.open("https://experience.herokuapp.com/", "_blank")
           }}
         >
           To app (Heroku)
@@ -70,13 +66,13 @@ const Maccaroni = () => {
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
           onClick={() => {
-            window.open("https://github.com/vVitalv/maccaroni/", "_blank")
+            window.open("https://github.com/vVitalv/experience/", "_blank")
           }}
         >
           To code (GitHub)
         </button>
       </div>
-      <p className='text-gray-500 text-xs mb-4'>
+      <p className='text-gray-500 text-xs mb-16'>
         Note: The delay in loading the application on Heroku is due to the
         server going to sleep after an hour of inactivity
       </p>
@@ -84,4 +80,4 @@ const Maccaroni = () => {
   )
 }
 
-export default Maccaroni
+export default ExpDemo
