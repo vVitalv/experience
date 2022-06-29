@@ -3,15 +3,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "../components/home"
 import About from "../components/about/about"
-import Contact from "../components/contact/contact"
+import Contacts from "../components/contact/contacts"
+import Content from "../components/content"
 
 const Root = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contacts' element={<Contact />} />
+        <Route path='/' element={<Home />}>
+          <Route index element={<Content />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contacts' element={<Contacts />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

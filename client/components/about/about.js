@@ -1,24 +1,20 @@
-import React from "react"
-import Div100vh from "react-div-100vh"
+import React, { useState } from "react"
 
-import Head from "../head"
-import Header from "../header"
-import AboutContent from "./aboutcontent"
-import Footer from "../footer"
+import Opila from "./opila"
 
 const About = () => {
+  const [mouseX, setX] = useState(0)
+  const [mouseY, setY] = useState(0)
   return (
-    <Div100vh>
-      <Head title='About' />
-      <div
-        id='viewport'
-        className='flex flex-col w-full h-full font-mono font-semibold'
-      >
-        <Header />
-        <AboutContent />
-        <Footer />
-      </div>
-    </Div100vh>
+    <main
+      className='flex flex-col justify-center items-center w-full h-full px-2 py-16 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'
+      onMouseMove={(e) => {
+        setX(e.clientX)
+        setY(e.clientY)
+      }}
+    >
+      <Opila mouseX={mouseX} mouseY={mouseY} />
+    </main>
   )
 }
 

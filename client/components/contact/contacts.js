@@ -3,7 +3,7 @@ import { createPortal } from "react-dom"
 
 import PopUpMsg from "../popupmsg"
 
-const ContactContent = () => {
+const Contacts = () => {
   const [popup, togglePopup] = useState(false)
   const [msgStatus, setStatus] = useState("ok")
   const msgs = {
@@ -91,4 +91,4 @@ const ContactContent = () => {
   )
 }
 
-export default ContactContent
+export default Contacts

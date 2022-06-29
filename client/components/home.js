@@ -1,18 +1,22 @@
 import React from "react"
+import { Outlet, useLocation } from "react-router-dom"
 import Div100vh from "react-div-100vh"
 
 import Head from "./head"
 import Header from "./header"
-import Content from "./content"
 import Footer from "./footer"
 
 const Home = () => {
+  const { pathname } = useLocation()
   return (
     <Div100vh>
-      <Head title='Home' />
-      <div id='viewport' className='flex flex-col w-full h-full font-mono font-semibold'>
+      <Head title={pathname} />
+      <div
+        id='viewport'
+        className='flex flex-col w-full h-full font-mono font-semibold'
+      >
         <Header />
-        <Content />
+        <Outlet />
         <Footer />
       </div>
     </Div100vh>
