@@ -70,7 +70,7 @@ const Maccaroni = () => {
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
           onClick={() => {
-            window.open("https://github.com/vVitalv/maccaroni/", "_blank")
+            window.open("https://github.com/vVitalv/week14-ecommerce", "_blank")
           }}
         >
           To code (GitHub)
