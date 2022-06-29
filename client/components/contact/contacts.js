@@ -1,11 +1,19 @@
 import React, { useState } from "react"
 import { createPortal } from "react-dom"
 
+import useRotate from "../hooks/rotate"
 import PopUpMsg from "../popupmsg"
 
 const Contacts = () => {
+  const [mouseX, setX] = useState(0)
+  const [mouseY, setY] = useState(0)
   const [popup, togglePopup] = useState(false)
   const [msgStatus, setStatus] = useState("ok")
+  const [rotateX, rotateY] = useRotate(mouseX, mouseY)
+  const rotateStyle = {
+    transform: `perspective(200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transitionDuration: "1s",
+  }
   const msgs = {
     email: {
       ok: "Email address copied to clipboard",
@@ -30,8 +38,17 @@ const Contacts = () => {
   }
 
   return (
-    <main className='flex justify-center items-center w-full h-full text-gray-200 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
-      <div className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-24'>
+    <main
+      className='flex justify-center items-center w-full h-full text-gray-200 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'
+      onMouseMove={(e) => {
+        setX(e.clientX)
+        setY(e.clientY)
+      }}
+    >
+      <div
+        className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-24'
+        style={rotateStyle}
+      >
         <div className='flex w-full justify-between'>
           <p>E-mail </p>
           <button
@@ -77,16 +94,16 @@ const Contacts = () => {
             linkedin.com {"\uD83C\uDF0D"}
           </button>
         </div>
-        {popup &&
-          createPortal(
-            <PopUpMsg
-              msg={msgStatus === "ok" ? msgs[popup].ok : msgs[popup].err}
-              err={msgStatus}
-              remove={togglePopup}
-            />,
-            document.body
-          )}
       </div>
+      {popup &&
+        createPortal(
+          <PopUpMsg
+            msg={msgStatus === "ok" ? msgs[popup].ok : msgs[popup].err}
+            err={msgStatus}
+            remove={togglePopup}
+          />,
+          document.body
+        )}
     </main>
   )
 }

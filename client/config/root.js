@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "../components/home"
 import About from "../components/about/about"
 import Contacts from "../components/contact/contacts"
-import Content from "../components/content"
+import Content from "../components/home/content"
 
 const Root = () => {
   return (

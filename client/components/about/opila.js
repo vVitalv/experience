@@ -1,16 +1,9 @@
 import React from "react"
 
+import useRotate from "../hooks/rotate"
+
 const Opila = ({ mouseX, mouseY }) => {
-  const width = document.body.clientWidth
-  const height = document.body.clientHeight
-  const rotateX =
-    mouseY < height / 2
-      ? Math.round((mouseY / height) * 25)
-      : Math.round(-(1 - mouseY / height) * 25)
-  const rotateY =
-    mouseX < width / 2
-      ? Math.round(-(mouseX / width) * 25)
-      : Math.round((1 - mouseX / width) * 25)
+  const [rotateX, rotateY] = useRotate(mouseX, mouseY)
   const opilaSkew = {
     transform: `perspective(200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
     transitionDuration: "0.6s",

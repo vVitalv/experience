@@ -1,12 +1,12 @@
 import React, { useRef } from "react"
 
-import useProgressObserver from "./hooks/progress"
+import useProgressObserver from "../hooks/progress"
 import ReactLogo from "./reactlogo"
 import H1 from "./h1"
-import Hi from "./section1/greetings"
-import Floodary from "./section2/floodary"
-import Maccaroni from "./section3/maccaroni"
-import ExpDemo from "./section4/expdemo"
+import Hi from "../section1/greetings"
+import Floodary from "../section2/floodary"
+import Maccaroni from "../section3/maccaroni"
+import ExpDemo from "../section4/expdemo"
 
 const Content = () => {
   const s1 = useRef()
