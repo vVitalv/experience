@@ -46,13 +46,13 @@ const Contacts = () => {
       }}
     >
       <div
-        className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-24'
+        className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-4 bg-purple-300 shadow-md shadow-purple-400 bg-opacity-50 rounded-md'
         style={rotateStyle}
       >
         <div className='flex w-full justify-between'>
           <p>E-mail </p>
           <button
-            className='text-gray-400 hover:text-purple-400 transition duration-300'
+            className='text-gray-300 hover:text-amber-400 transition duration-300'
             type='button'
             onClick={(e) => showPopup(e, "email")}
           >
@@ -62,7 +62,7 @@ const Contacts = () => {
         <div className='flex w-full justify-between'>
           <p>Telegram </p>
           <button
-            className='text-gray-400 hover:text-purple-400 transition duration-300'
+            className='text-gray-300 hover:text-amber-400 transition duration-300'
             type='button'
             onClick={(e) => showPopup(e, "telegram")}
           >
@@ -72,7 +72,7 @@ const Contacts = () => {
         <div className='flex w-full justify-between'>
           <p>GitHub </p>
           <button
-            className='text-gray-400 hover:text-purple-400 transition duration-300'
+            className='text-gray-300 hover:text-amber-400 transition duration-300'
             type='button'
             onClick={() => window.open("https://github.com/vVitalv/", "_blank")}
           >
@@ -82,7 +82,7 @@ const Contacts = () => {
         <div className='flex w-full justify-between'>
           <p>LinkedIn </p>
           <button
-            className='text-gray-400 hover:text-purple-400 transition duration-300'
+            className='text-gray-300 hover:text-amber-400 transition duration-300'
             type='button'
             onClick={() =>
               window.open(
