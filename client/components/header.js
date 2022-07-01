@@ -6,7 +6,7 @@ import HeaderMenu from "./headermenu"
 const Header = () => {
   const [isDroped, toggleMenu] = useState(false)
   return (
-    <header className='fixed z-50 flex justify-between items-center w-full h-14 px-6 bg-neutral-500 text-gray-200 bg-opacity-10 backdrop-blur-md'>
+    <header className='fixed z-50 flex justify-between items-center font-semibold w-full h-14 px-6 bg-neutral-500 text-gray-200 bg-opacity-10 backdrop-blur-md'>
       <p>
         <span>E X P </span>
         <span className='text-amber-300'>D E M {"\u16DF"}</span>
@@ -19,7 +19,7 @@ const Header = () => {
         onMouseLeave={() => toggleMenu(false)}
       >
         <svg
-          className={`${isDroped ? "rotate-90" : ""} duration-100`}
+          className={`${isDroped && "rotate-90"} duration-100`}
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
         >

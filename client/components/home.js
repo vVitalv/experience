@@ -13,7 +13,7 @@ const Home = () => {
       <Head title={pathname} />
       <div
         id='viewport'
-        className='flex flex-col w-full h-full font-mono font-semibold'
+        className='w-full h-full font-mono'
       >
         <Header />
         <Outlet />

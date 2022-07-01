@@ -8,7 +8,7 @@ const Head = ({ title }) => {
       hTitle = "Home"
       break
     case "/about":
-      hTitle = "About"
+      hTitle = "About a girl \uD83E\uDD18"
       break
     case "/contacts":
       hTitle = "Contacts"
