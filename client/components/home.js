@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom"
 import Div100vh from "react-div-100vh"
 
 import Head from "./head"
-import Header from "./header"
+import Header from "./header/header"
 import Footer from "./footer"
 
 const Home = () => {
