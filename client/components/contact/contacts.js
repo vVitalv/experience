@@ -39,14 +39,14 @@ const Contacts = () => {
 
   return (
     <main
-      className='flex justify-center items-center w-full h-full text-gray-200 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'
+      className='flex justify-center items-center w-full h-full text-gray-200 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 dark:from-gray-900 dark:via-gray-700 dark:to-gray-900'
       onMouseMove={(e) => {
         setX(e.clientX)
         setY(e.clientY)
       }}
     >
       <div
-        className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-4 bg-purple-300 shadow-md shadow-purple-400 bg-opacity-50 rounded-md'
+        className='flex flex-col gap-4 w-72 sm:w-80 px-4 py-4 bg-purple-500 dark:bg-purple-300 shadow-md shadow-purple-400 bg-opacity-50 dark:bg-opacity-50 rounded-md'
         style={rotateStyle}
       >
         <div className='flex w-full justify-between'>

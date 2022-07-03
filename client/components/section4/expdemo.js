@@ -19,7 +19,8 @@ const ExpDemo = () => {
         </span>
       </p>
       <p ref={s2p2} className={pStyle}>
-        that implemented: responsive design, accessibility, SVG drawing, scroll observing
+        that implemented: responsive design, accessibility, SVG drawing, scroll
+        observing
       </p>
       <p ref={s2p3} className={pStyle}>
         Stack used:
@@ -72,7 +73,7 @@ const ExpDemo = () => {
           To code (GitHub)
         </button>
       </div>
-      <p className='text-gray-500 text-xs mb-16'>
+      <p className='text-gray-300 dark:text-gray-500 text-xs mb-16'>
         Note: The delay in loading the application on Heroku is due to the
         server going to sleep after an hour of inactivity
       </p>

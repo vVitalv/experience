@@ -1,7 +1,6 @@
 module.exports = {
-  content: [
-    "./client/**/*.{js,jsx,vue}"
-  ],
+  darkMode: "class",
+  content: ["./client/**/*.{js,jsx,vue}"],
   theme: {
     extend: {},
   },

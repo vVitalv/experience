@@ -9,7 +9,7 @@ const About = () => {
     return () => {}
   })
   return (
-    <main className='w-full h-fit py-20 text-gray-200 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
+    <main className='w-full h-fit py-20 text-gray-200 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 dark:from-gray-900 dark:via-gray-700 dark:to-gray-900'>
       <div className='w-fit p-4 mx-auto bg-gray-700 bg-opacity-70 shadow-md shadow-purple-400 rounded-md'>
         <h2 className="text-amber-400 font-semibold">About A Girl</h2>
         <pre className='font-normal'>

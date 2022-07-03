@@ -23,5 +23,6 @@ export default function useTextObserver(refs) {
       }
       return null
     })
+    return () => {}
   })
 }

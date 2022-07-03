@@ -18,7 +18,7 @@ const Content = () => {
   const s3Width = useProgressObserver(s3)
   const s4Width = useProgressObserver(s4)
   return (
-    <main className='flex flex-col items-center w-full h-fit px-2 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900'>
+    <main className='flex flex-col items-center w-full h-fit px-2 bg-gradient-to-r from-gray-300 via-gray-500 to-gray-300 dark:from-gray-900 dark:via-gray-700 dark:to-gray-900'>
       <ReactLogo />
       <div ref={s1} className='flex flex-col items-center w-full'>
         <H1 hText={'Greetings \uD83D\uDC4B'} width={s1Width} />

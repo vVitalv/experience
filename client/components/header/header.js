@@ -12,34 +12,34 @@ const Header = () => {
       .classList.toggle("[transform:rotate3d(0,1,0,-90deg)]")
   }
   return (
-    <header className='fixed z-50 flex justify-between items-center font-semibold w-full h-14 px-6 bg-neutral-500 text-gray-200 bg-opacity-10 backdrop-blur-md'>
+    <header className='fixed z-50 flex justify-between items-center font-semibold w-full h-16 px-6 bg-neutral-600 text-gray-500 dark:text-gray-200 bg-opacity-10 backdrop-blur-md'>
       <p>
         <span>E X P </span>
         <span className='text-amber-300'>D E M {"\u16DF"}</span>
       </p>
-      <div className='flex justify-between items-center h-full w-24'>
+      <div className='flex justify-between items-end h-full w-32'>
         <div
           id='theme_btn'
-          className='relative w-[40px] h-[40px] [transform-style:preserve-3d] transition-all duration-300'
+          className='relative w-10 h-10 mb-3 [transform-style:preserve-3d] transition-all duration-500'
         >
           <button
             type='button'
-            className='absolute text-base h-full w-full [transform:translateZ(20px)]'
-            onClick={themeToggle}
-          >
-            {"\uD83C\uDF1A"}
-          </button>
-          <button
-            type='button'
-            className='absolute text-base h-full w-full [transform:rotateY(90deg)_translateZ(20px)]'
+            className='absolute text-base h-full w-full border border-gray-500 hover:border-yellow-300 transition-colors rounded-md [transform:translateZ(20px)]'
             onClick={themeToggle}
           >
             {"\uD83C\uDF1E"}
           </button>
+          <button
+            type='button'
+            className='absolute text-base h-full w-full border border-gray-400 hover:border-purple-600 transition-colors rounded-md [transform:rotateY(90deg)_translateZ(20px)]'
+            onClick={themeToggle}
+          >
+            {"\uD83C\uDF1A"}
+          </button>
         </div>
         <button
           type='button'
-          className='self-end w-7 h-10 pb-3 stroke-gray-200 outline-none'
+          className='w-10 h-[52px] pb-3 stroke-gray-500 dark:stroke-gray-400 outline-none'
           onClick={() => toggleMenu(!isDroped)}
           onMouseEnter={() => toggleMenu(true)}
           onMouseLeave={() => toggleMenu(false)}

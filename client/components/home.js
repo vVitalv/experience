@@ -13,7 +13,7 @@ const Home = () => {
       <Head title={pathname} />
       <div
         id='viewport'
-        className='w-full h-full font-mono'
+        className='w-full h-full font-mono font-semibold'
       >
         <Header />
         <Outlet />
