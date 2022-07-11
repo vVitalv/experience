@@ -20,7 +20,7 @@ const ExpDemo = () => {
       </p>
       <p ref={s2p2} className={pStyle}>
         that implemented: responsive design, accessibility, SVG drawing, scroll
-        observing
+        observing, dark-mode
       </p>
       <p ref={s2p3} className={pStyle}>
         Stack used:

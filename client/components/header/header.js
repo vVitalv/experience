@@ -17,7 +17,7 @@ const Header = () => {
         <span>E X P </span>
         <span className='text-amber-300'>D E M {"\u16DF"}</span>
       </p>
-      <div className='flex justify-between items-end h-full w-32'>
+      <div className='flex justify-between items-end h-full w-28'>
         <div
           id='theme_btn'
           className='relative w-10 h-10 mb-3 [transform-style:preserve-3d] transition-all duration-500'
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
         <button
           type='button'
-          className='w-10 h-[52px] pb-3 stroke-gray-500 dark:stroke-gray-400 outline-none'
+          className='w-8 h-[52px] pb-3 stroke-gray-500 dark:stroke-gray-400 outline-none'
           onClick={() => toggleMenu(!isDroped)}
           onMouseEnter={() => toggleMenu(true)}
           onMouseLeave={() => toggleMenu(false)}
