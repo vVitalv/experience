@@ -61,10 +61,10 @@ const Maccaroni = () => {
           type='button'
           className='w-36 p-2 bg-purple-600 rounded-md text-xs text-gray-200 hover:bg-purple-700 hover:text-amber-200 transition duration-200'
           onClick={() => {
-            window.open("https://maccaroni.herokuapp.com/", "_blank")
+            window.open("https://maccaroni.onrender.com/", "_blank")
           }}
         >
-          To app (Heroku)
+          To app (Render)
         </button>
         <button
           type='button'
