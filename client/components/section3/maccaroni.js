@@ -77,7 +77,7 @@ const Maccaroni = () => {
         </button>
       </div>
       <p className='text-gray-300 dark:text-gray-500 text-xs mb-4'>
-        Note: The delay in loading the application on Heroku is due to the
+        Note: The delay in loading the application on Render.com is due to the
         server going to sleep after an hour of inactivity
       </p>
     </section>
